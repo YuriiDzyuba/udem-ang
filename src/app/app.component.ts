@@ -7,4 +7,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Hi its me';
+  addNewServer: boolean = false
+
+  constructor() {
+    setInterval(()=>{
+      this.addNewServer = !this.addNewServer
+    }, 3000)
+  }
 }
