@@ -9,6 +9,7 @@ export class AppComponent {
   title = 'Hi its me';
   addNewServer: boolean = false
   serverName:string = ''
+  hostName:string = ''
 
   constructor() {
     setInterval(()=>{
