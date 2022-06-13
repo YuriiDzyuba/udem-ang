@@ -8,4 +8,9 @@ import {Component} from "@angular/core";
 export class ServerComponent {
   serverId: number = 23;
   serverStatus: string = 'offline'
+  value: string = 'some string'
+
+  getValue(): string {
+    return this.value
+  }
 }
