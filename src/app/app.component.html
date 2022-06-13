@@ -1,6 +1,12 @@
 <div class="container">
   <h2> {{title}}</h2>
 </div>
+<input
+type="text"
+class="form-control"
+(input)="onUpdateServerName($event)"
+>
+<p>{{ serverName }}</p>
 <div class="container">
   <button class="btn btn-primary" [disabled]="!addNewServer">
     Add Server
