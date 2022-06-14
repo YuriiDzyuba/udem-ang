@@ -41,7 +41,12 @@
   [disabled]="allowNewName"
   (click)="onCreateNewName()"
   >Add new name</button>
-  <p *ngIf="isNewNameCreated">New name was created {{ newName }}</p>
+  <p *ngIf="isNewNameCreated; else noNameCreated">New name was created {{ newName }}</p>
+  <ng-template #noNameCreated>
+    <p>
+      No name was created
+    </p>
+  </ng-template>
 </div>
 
 
