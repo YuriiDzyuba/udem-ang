@@ -13,6 +13,8 @@ export class AppComponent {
   newName = ''
   allowNewName: boolean = false
   isNewNameCreated: boolean = false;
+ names: string[] = ['Vasil', 'Yurii']
+
 
 
   constructor() {
@@ -28,5 +30,6 @@ export class AppComponent {
   onCreateNewName(){
     this.allowNewName = true
     this.isNewNameCreated = true
+    this.names.push(this.newName)
   }
 }

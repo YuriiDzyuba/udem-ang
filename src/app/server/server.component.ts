@@ -3,6 +3,14 @@ import {Component} from "@angular/core";
 @Component({
   selector: 'server-comp',
   templateUrl: './server.component.html',
+  styles: [`
+  .online {
+    background-color: aqua;
+  }
+  .offline {
+    background-color: rosybrown;
+  }
+  `]
 })
 
 export class ServerComponent {

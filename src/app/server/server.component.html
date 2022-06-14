@@ -1,6 +1,10 @@
 <div class="container">
-  <h2>Server component</h2>
+  <h2>Server component ngStyle</h2>
   <p [ngStyle]="{
   color: getColor()
   }"> {{'Server'}} {{ serverId }} is {{ serverStatus}} and this is a function {{ getValue() }} </p>
+
+  <h2>Server component ngClass</h2>
+  <p [ngClass]="{online: serverStatus === 'online'}"> {{'Server'}} {{ serverId }} is {{ serverStatus}} and this is a function {{ getValue() }} </p>
+  <p [ngClass]="{offline: serverStatus === 'offline'}"> {{'Server'}} {{ serverId }} is {{ serverStatus}} and this is a function {{ getValue() }} </p>
 </div>
