@@ -10,6 +10,10 @@ export class AppComponent {
   addNewServer: boolean = false
   serverName:string = ''
   hostName:string = ''
+  newName = ''
+  allowNewName: boolean = false
+  isNewNameCreated: boolean = false;
+
 
   constructor() {
     setInterval(()=>{
@@ -19,5 +23,10 @@ export class AppComponent {
 
   onUpdateServerName(event){
     this.serverName = (<HTMLInputElement>event.target).value
+  }
+
+  onCreateNewName(){
+    this.allowNewName = true
+    this.isNewNameCreated = true
   }
 }

@@ -1,27 +1,49 @@
 <div class="container">
   <h2> {{title}}</h2>
 </div>
-<input
-type="text"
-class="form-control"
-(input)="onUpdateServerName($event)"
->
-<p>{{ serverName }}</p>
-<br>
-
-<input
-type="text"
-class="form-control"
-[(ngModel)]="hostName"
->
-<p>{{ hostName }}</p>
-<br>
 <div class="container">
-  <button class="btn btn-primary" [disabled]="!addNewServer">
-    Add Server
-  </button>
-  <p>{{ addNewServer }}</p>
-  <p [innerText]="addNewServer"></p>
-  <server-comp></server-comp>
+  <input
+    type="text"
+    class="form-control"
+    (input)="onUpdateServerName($event)"
+  >
+  <br>
+  <hr>
+  <input
+    type="text"
+    class="form-control"
+    [(ngModel)]="hostName"
+  >
+  <p>{{ hostName }}</p>
+  <br>
+  <div class="container">
+    <button class="btn btn-primary" [disabled]="!addNewServer">
+      Add Server
+    </button>
+    <p>{{ addNewServer }}</p>
+    <p [innerText]="addNewServer"></p>
+    <server-comp></server-comp>
+
+  </div>
+  <p>{{ serverName }}</p>
+  <br>
 
 </div>
+
+<div class="container">
+  <input type="text"
+  class="form-control"
+  [(ngModel)]="newName"
+  >
+
+  <button
+  class="btn btn-secondary"
+  [disabled]="allowNewName"
+  (click)="onCreateNewName()"
+  >Add new name</button>
+  <p *ngIf="isNewNameCreated">New name was created {{ newName }}</p>
+</div>
+
+
+
+
